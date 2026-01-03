@@ -1,6 +1,7 @@
 package com.salud360.demo.tasktracker.controller;
 
 import com.salud360.demo.tasktracker.model.CreateTaskRequest;
+import com.salud360.demo.tasktracker.model.Priority;
 import com.salud360.demo.tasktracker.model.Task;
 import com.salud360.demo.tasktracker.service.TaskService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -29,7 +30,8 @@ public class TaskController {
     @Operation(summary = "Create a new task")
     @PostMapping
     public Task createTask(@Valid @RequestBody CreateTaskRequest request) {
-        return taskService.createTask(request.getTitle());
+        Priority priority = request.getPriority() != null ? request.getPriority() : Priority.DEFAULT;
+        return taskService.createTask(request.getTitle(), request.getDescription(), priority);
     }
     
     @Operation(summary = "List all tasks")

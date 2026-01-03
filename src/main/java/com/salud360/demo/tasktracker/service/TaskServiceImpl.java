@@ -2,9 +2,11 @@ package com.salud360.demo.tasktracker.service;
 
 import com.salud360.demo.tasktracker.exception.TaskAlreadyCompletedException;
 import com.salud360.demo.tasktracker.exception.TaskNotFoundException;
+import com.salud360.demo.tasktracker.model.Priority;
 import com.salud360.demo.tasktracker.model.Task;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -15,9 +17,9 @@ public class TaskServiceImpl implements TaskService {
     private final List<Task> tasks = new ArrayList<>();
     
     @Override
-    public Task createTask(String title) {
+    public Task createTask(String title, String description, Priority priority) {
         UUID id = UUID.randomUUID();
-        Task task = new Task(id, title, false);
+        Task task = new Task(id, title, description, priority, false);
         tasks.add(task);
         return task;
     }
@@ -39,6 +41,7 @@ public class TaskServiceImpl implements TaskService {
         }
         
         task.setCompleted(true);
+        task.setCompletedAt(LocalDateTime.now());
     }
 }
 
