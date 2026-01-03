@@ -6,7 +6,7 @@ Demo project for api
 
 This is a Spring Boot application created with:
 - Spring Boot 4.0.1
-- Java 25
+- Java 21
 - Maven
 - Spring Web
 
