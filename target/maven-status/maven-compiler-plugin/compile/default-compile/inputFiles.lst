@@ -1,0 +1,10 @@
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\config\SwaggerConfig.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\controller\GlobalExceptionHandler.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\controller\TaskController.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\exception\TaskAlreadyCompletedException.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\exception\TaskNotFoundException.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\model\CreateTaskRequest.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\model\Task.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\service\TaskService.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\service\TaskServiceImpl.java
+C:\Examen\src\main\java\com\salud360\demo\tasktracker\TasktrackerApplication.java

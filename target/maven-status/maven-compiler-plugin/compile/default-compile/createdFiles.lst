@@ -1,0 +1,10 @@
+com\salud360\demo\tasktracker\config\SwaggerConfig.class
+com\salud360\demo\tasktracker\service\TaskService.class
+com\salud360\demo\tasktracker\service\TaskServiceImpl.class
+com\salud360\demo\tasktracker\exception\TaskNotFoundException.class
+com\salud360\demo\tasktracker\TasktrackerApplication.class
+com\salud360\demo\tasktracker\model\CreateTaskRequest.class
+com\salud360\demo\tasktracker\controller\GlobalExceptionHandler.class
+com\salud360\demo\tasktracker\controller\TaskController.class
+com\salud360\demo\tasktracker\exception\TaskAlreadyCompletedException.class
+com\salud360\demo\tasktracker\model\Task.class
