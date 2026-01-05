@@ -7,14 +7,14 @@ import com.salud360.demo.tasktracker.model.Task;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 public class TaskServiceImpl implements TaskService {
     
-    private final List<Task> tasks = new ArrayList<>();
+    private final List<Task> tasks = new CopyOnWriteArrayList<>();
     
     @Override
     public Task createTask(String title, String description, Priority priority) {
@@ -26,7 +26,7 @@ public class TaskServiceImpl implements TaskService {
     
     @Override
     public List<Task> getAllTasks() {
-        return new ArrayList<>(tasks);
+        return List.copyOf(tasks);
     }
     
     @Override
